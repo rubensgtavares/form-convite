@@ -59,6 +59,7 @@ select.touched:invalid:focus-visible {
   gap: 1rem;
 }
 .submit-button {
+  margin-top: 1rem;
   height: 3rem;
   width: 11.0625rem;
   display: flex;
