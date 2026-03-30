@@ -1,0 +1,56 @@
+.switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+  width: fit-content;
+}
+
+.switch input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.slider {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+  background-color: var(--input-base);
+  border-radius: 24px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--input-stroke);
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.switch input:checked + .slider::before {
+  background-color: var(--text-heading);
+}
+.switch input:checked + .slider {
+  background-color: var(--brand-light);
+}
+
+/* Movimento da bolinha */
+.switch input:checked + .slider:before {
+  transform: translateX(16px);
+}
+
+.switch-text {
+  font: var(--text-body-sm);
+  color: var(--text-body);
+}

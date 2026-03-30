@@ -1,0 +1,89 @@
+label.with-icon {
+  margin-top: 3rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font: var(--text-heading-sm);
+  color: var(--text-heading);
+}
+
+.with-icon label svg,
+label .lucide {
+  color: var(--input-placeholder);
+}
+
+/* Grupo de swatches */
+.color-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  margin-left: 0.25rem;
+}
+
+.color-swatches .swatch {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 999px;
+  border: 3px solid var(--shape-button);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    outline-color 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.color-swatches .swatch input[type="radio"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  margin: 0;
+}
+.color-swatches .swatch:hover {
+  transform: scale(1.06);
+  border-color: var(--shape-hover);
+}
+.color-swatches .swatch:has(input:focus-visible) {
+  outline: 2px solid var(--brand-light);
+  outline-offset: 2px;
+}
+
+.color-swatches .swatch:has(input:checked) {
+  box-shadow: 0 0 0 2px var(--brand-light);
+}
+
+.swatch[data-color="navy"] {
+  background: var(--navy);
+}
+.swatch[data-color="purple"] {
+  background: var(--purple);
+}
+.swatch[data-color="fuschia"] {
+  background: var(--fuschia);
+}
+.swatch[data-color="pink"] {
+  background: var(--pink);
+}
+.swatch[data-color="orange"] {
+  background: var(--orange);
+}
+.swatch[data-color="yellow"] {
+  background: var(--yellow);
+}
+.swatch[data-color="lime"] {
+  background: var(--lime);
+}
+.swatch[data-color="green"] {
+  background: var(--green);
+}
+.swatch[data-color="cyan"] {
+  background: var(--cyan);
+}
+.swatch[data-color="brand"] {
+  background: var(--brand-light);
+}

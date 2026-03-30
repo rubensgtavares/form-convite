@@ -1,0 +1,23 @@
+form {
+  width: 100%;
+}
+
+legend {
+  color: var(--input-placeholder);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+legend p {
+  font: var(--text-heading-sm);
+  color: var(--text-heading);
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
+}
